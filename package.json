@@ -1,0 +1,7 @@
+{
+  "name": "ds-pratik",
+  "packageManager": "yarn@4.4.1",
+  "workspaces": [
+    "packages/*"
+  ]
+}
