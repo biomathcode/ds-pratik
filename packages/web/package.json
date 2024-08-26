@@ -5,7 +5,7 @@
     "@pratik-ds/foundation": "workspace:^",
     "styled-components": "^6.1.12"
   },
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "build": "yarn build:css && tsc",
     "watch:css": "npx tailwindcss -i ./src/input.css -o ./lib/output.css --watch",
