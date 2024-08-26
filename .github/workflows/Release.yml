@@ -22,17 +22,15 @@ jobs:
       - name: Install packages
         run: yarn
       - name: Build packages in order
-        run: yarn workspace @pratik-ds/foundation build && yarn workspace @pratik-ds/web build
+        run: yarn workspace @pratik-ds/foundation build && yarn workspace @pratik-ds/react build
       - name: Run our tests
-        run: yarn workspace @pratik-ds/web test
-      - name: Bumb versions and publish with changesets
+        run: yarn workspace @pratik-ds/react test
+      - name: Bump versions and publish with changesets
         run: |
           # Bump versions
           yarn changeset version
-          # Publish to npm (not configured in our case)
-          # Need to change slightly, as there is a known issue with workspace:^ versioning
-          # Issue: https://github.com/changesets/changesets/issues/432
-          # yarn changeset publish
+          # Publish to npm
+          yarn workspace @pratik-ds/web publish --access public
           git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
