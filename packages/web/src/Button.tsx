@@ -23,12 +23,15 @@ const ButtonStyled = styled.button<ButtonProps>`
   transition: ${tokens.animations.default.value};
   color: ${tokens.colors.neutral.white.value};
   border-radius: ${tokens.radius.large.value};
-  background-color: ${(props) => tokens.colors[props.color][500].value};
+  background-color: ${(props) =>
+    tokens.colors[props.color as keyof typeof tokens.colors][500].value};
   &:hover {
-    background-color: ${(props) => tokens.colors[props.color][700].value};
+    background-color: ${(props) =>
+      tokens.colors[props.color as keyof typeof tokens.colors][700].value};
   }
   &:active {
-    background-color: ${(props) => tokens.colors[props.color][800].value};
+    background-color: ${(props: any) =>
+      tokens.colors[props.color as keyof typeof tokens.colors][800].value};
   }
 `;
 
