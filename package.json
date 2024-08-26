@@ -3,5 +3,22 @@
   "packageManager": "yarn@4.4.1",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore --quiet --no-error-on-unmatched-pattern packages/**/*{js,jsx,ts,tsx}"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@types/eslint": "^9",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
 }

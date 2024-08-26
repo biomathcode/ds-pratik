@@ -1,0 +1,17 @@
+{
+  "name": "@pratik-ds/foundation",
+  "packageManager": "yarn@4.4.1",
+  "devDependencies": {
+    "style-dictionary": "^4.0.1",
+    "typescript": "^5.5.4"
+  },
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build-tokens": "style-dictionary build --config sd.config.js",
+    "build": "yarn build-tokens && tsc",
+    "build-tsc": "tsc --skipLibCheck",
+    "tsc-ve": "tsc --version"
+  }
+}
