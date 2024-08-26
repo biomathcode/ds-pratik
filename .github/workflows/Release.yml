@@ -22,9 +22,9 @@ jobs:
       - name: Install packages
         run: yarn
       - name: Build packages in order
-        run: yarn workspace @newline-ds/foundation build && yarn workspace @newline-ds/react build
+        run: yarn workspace @pratik-ds/foundation build && yarn workspace @pratik-ds/react build
       - name: Run our tests
-        run: yarn workspace @newline-ds/react test
+        run: yarn workspace @pratik-ds/react test
       - name: Bumb versions and publish with changesets
         run: |
           # Bump versions
